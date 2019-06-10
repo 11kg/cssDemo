@@ -1,0 +1,44 @@
+transition
+transition：<过渡属性名称> <过渡时间>
+
+-webkit-transition
+-moz-transition
+-o-transition
+
+多个属性的过渡效果
+-方法1
+-webkit-transition: <属性1> <时间1>, <属性2> <时间2>,...
+-方法2
+-webkit-transition:<属性1> <时间1>;
+-webkit-transition:<属性2> <时间2>;
+
+transition: <过渡属性名称> <过渡时间> <过渡模式>
+transition-timing-function
+    ease            缓慢开始，缓慢结束
+    linear          匀速
+    ease-in         缓慢开始
+    ease-out        缓慢结束
+    ease-in-out     缓慢开始，缓慢结束（和ease稍有区别）
+
+设置3D场景
+-webkit-perspective: 800;
+-webkit-perspective-origin: 50% 50%;
+
+使用transform属性调整元素
+    -translate
+        translateX(x px)
+        translateY(y px)
+        translateZ(z px)
+    -rotate
+        rotateX(x deg)
+        rotateY(y deg)
+        rotateZ(z deg)
+
+-webkit-transform-style:-webkit-preserve-3d;
+
+使用transform-origin属性调整旋转中心
+x轴         y轴        z轴
+left        top        length px
+center      center
+right       bottom
+

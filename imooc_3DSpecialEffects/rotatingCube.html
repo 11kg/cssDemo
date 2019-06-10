@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>rotatingCube</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            transition: -webkit-transform 1s linear;
+            transform-style:preserve-3d;
+
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            position: relative;
+            transform: rotateX(-27deg) rotateY(-55deg);
+            animation: willRote 3s ease-in-out infinite alternate;
+        }
+        @keyframes willRote {
+			/* 0% {
+				transform: rotateX(-27deg) rotateY(-55deg);
+			}
+			50% {
+				transform: rotateX(-27deg) rotateY(180deg);
+			}
+			100% {
+				transform: rotateX(-27deg) rotateY(360deg);
+            } */
+            0%{
+                -webkit-transform:rotateX(0deg) rotateY(0deg);
+                        transform:rotateX(0deg) rotateY(0deg);
+            }
+            100%{
+                -webkit-transform:rotateX(360deg) rotateY(360deg);
+                        transform:rotateX(360deg) rotateY(360deg);
+            }
+		}
+		ul li{
+			list-style: none;
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			line-height: 200px;
+			font-size: 40px;
+			position: absolute;
+		}
+		ul li:nth-child(1){
+			background-color: rgba(0,0,255,0.7);
+			transform: rotateX(90deg) translateZ(100PX);
+		}
+		ul li:nth-child(2){
+			background-color: rgba(255,69,0,0.7);
+			transform: rotateX(180deg) translateZ(100PX);
+		}
+		ul li:nth-child(3){
+			background-color:rgba(11,23,70,0,7);
+			transform: rotateX(270deg) translateZ(100PX);
+		}
+		ul li:nth-child(4){
+			background-color:rgba(255,255,0,0.7);
+			transform: rotateX(360deg) translateZ(100PX);
+		}
+		ul li:nth-child(5){
+			background-color: rgba(255,192,203,0.7);
+			transform: rotateY(90deg) translateZ(100PX);
+		}
+		ul li:nth-child(6){
+			background-color:rgba(218,112,214,0.7);
+			transform: rotateY(90deg) translateZ(-100PX);
+		}
+        #op{
+            margin: 0 auto;
+            font-size: 16px;
+            font-weight: bold;
+            width: 800px;
+        }
+        #op .range-control{width: 721px;}
+    </style>
+
+    <!-- <script type="text/javascript">
+        function rotate(){
+            var x = document.getElementById("rotatex").value;
+            var y = document.getElementById("rotatey").value;
+            var z = document.getElementById("rotatez").value;
+
+            document.getElementById('degx-span').innerText = x;
+            document.getElementById('degy-span').innerText = y;
+            document.getElementById('degz-span').innerText = z;
+
+            // document.getElementsByTagName('ul').style.webkitTransform = "rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)";
+        }
+    </script> -->
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+
+    <!-- <div id="op">
+        <p>rotate x: <span id="degx-span">-27</span>deg</p>
+        <input type="range" min="-360" max="360" id="rotatex" value="-27" class="range-control" onchange="rotate()" /><br/>
+        <p>rotate y: <span id="degy-span">-55</span>deg</p>
+        <input type="range" min="-360" max="360" id="rotatey" value="-55" class="range-control" onchange="rotate()" /><br/>
+        <p>rotate z: <span id="degz-span">0</span>deg</p>
+        <input type="range" min="-360" max="360" id="rotatez" value="0" class="range-control" onchange="rotate()" /><br/>
+    </div> -->
+</body>
+</html>
