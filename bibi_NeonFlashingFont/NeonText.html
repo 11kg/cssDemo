@@ -1,0 +1,56 @@
+<!-- 在bibi https://www.bilibili.com/video/av54768012?from=search&seid=7572764030070343869 学习 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.font.im/css?family=Monoton" rel="stylesheet">
+    <title>NeomText</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #000;
+        }
+        .neon-warp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .neon-warp span {
+            display: block;
+        }
+        .neon-text {
+            font-family: 'Monoton', cursive;
+            font-size: 100px;
+            animation: neon 2s infinite;
+        }
+        .neon-by {
+            color: #e91e63;
+            text-shadow: -3px 0px 5px #e91e63, 0px 0px 2px #e91e63;
+        }
+        @keyframes neon {
+            0%, 30%, 32%, 34% {
+                color: #222222;
+                text-shadow: -3px 0px 5px #222222, 0px 0px 2px #222222;
+            }
+            31%, 33%, 35%, 100% {
+                color: #e91e63;
+                text-shadow: -3px 0px 5px #e91e63, 0px 0px 2px #e91e63;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="neon-warp">
+        <span class="neon-text">CSS</span>
+        <span class="neon-by">by @VincentTV</span>
+    </div>
+</body>
+</html>
